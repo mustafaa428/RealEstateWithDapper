@@ -29,8 +29,8 @@
                                     <th scope="row">@count</th>
                                     <td>@category.Name</td>
                                     <td>@category.status</td>
-                                    <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
-                                    <td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+                                    <td><a href="/Category/DeleteCategory/@category.Id" class="btn btn-outline-danger">Sil</a></td>
+                                    <td><a href="/Category/UpdateCategory/@category.Id" class="btn btn-outline-success">Güncelle</a></td>
                                 </tr>
                                 count++;
                             }
@@ -44,7 +44,7 @@
 
                     </tbody>
                 </table>
-                <a href="#" class="btn btn-outline-info">Yeni kategori ekle</a>
+                <a href="/Category/AddCategory" class="btn btn-outline-info">Yeni kategori ekle</a>
             </div>
         </div>
         

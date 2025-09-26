@@ -1,0 +1,267 @@
+-- DROP SCHEMA dbo;
+
+CREATE SCHEMA dbo;
+-- DBDAPPERREALESTATE.dbo.Address definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.Address;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.Address (
+	Id int IDENTITY(1,1) NOT NULL,
+	Title1 nvarchar(200) COLLATE Turkish_CI_AS NULL,
+	Description nvarchar(500) COLLATE Turkish_CI_AS NULL,
+	Title2 nvarchar(200) COLLATE Turkish_CI_AS NULL,
+	Phone1 nvarchar(25) COLLATE Turkish_CI_AS NULL,
+	Phone2 nvarchar(25) COLLATE Turkish_CI_AS NULL,
+	Email nvarchar(50) COLLATE Turkish_CI_AS NULL,
+	CONSTRAINT PK__Address__3214EC073FF68109 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.BottomGrid definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.BottomGrid;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.BottomGrid (
+	Id int IDENTITY(1,1) NOT NULL,
+	Icon nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Title nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Description nvarchar(250) COLLATE Turkish_CI_AS NULL,
+	CONSTRAINT PK__BottomGr__3214EC079C459B88 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.Categories definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.Categories;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.Categories (
+	Id int IDENTITY(1,1) NOT NULL,
+	Name nvarchar(50) COLLATE Turkish_CI_AS NULL,
+	Status bit NULL,
+	CONSTRAINT PK__Categori__3214EC079F6BA609 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.Client definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.Client;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.Client (
+	Id int IDENTITY(1,1) NOT NULL,
+	Name nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Title nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Comment nvarchar(2000) COLLATE Turkish_CI_AS NULL,
+	CONSTRAINT PK__Client__3214EC07F3806D4A PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.Contact definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.Contact;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.Contact (
+	Id int IDENTITY(1,1) NOT NULL,
+	Name nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Subject nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Email nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Message nvarchar(MAX) COLLATE Turkish_CI_AS NULL,
+	SendDate date NULL,
+	CONSTRAINT PK__Contact__3214EC0783E3C947 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.Employee definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.Employee;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.Employee (
+	Id int IDENTITY(1,1) NOT NULL,
+	Name nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Title nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Email nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Phone nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	ImageUrl nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Status bit NULL,
+	CONSTRAINT PK__Employee__3214EC07895E3F05 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.MailSubscribe definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.MailSubscribe;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.MailSubscribe (
+	Id int IDENTITY(1,1) NOT NULL,
+	Email nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	CONSTRAINT PK__MailSubs__3214EC0708C96CA7 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.PopularLocation definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.PopularLocation;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.PopularLocation (
+	Id int IDENTITY(1,1) NOT NULL,
+	CityName nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	ImageUrl nvarchar(200) COLLATE Turkish_CI_AS NULL,
+	CONSTRAINT PK__PopularL__3214EC07069859BB PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.Service definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.Service;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.Service (
+	Id int IDENTITY(1,1) NOT NULL,
+	Name nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Status bit NULL,
+	CONSTRAINT PK__Service__3214EC073C47DA5A PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.SocialMedia definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.SocialMedia;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.SocialMedia (
+	Id int IDENTITY(1,1) NOT NULL,
+	Name nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Icon nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Url nvarchar(200) COLLATE Turkish_CI_AS NULL,
+	CONSTRAINT PK__SocialMe__3214EC07A270D51C PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.SubFeature definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.SubFeature;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.SubFeature (
+	Id int IDENTITY(1,1) NOT NULL,
+	Icon nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	TopTitle nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	MainTitle nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Description nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	SubTitle nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	CONSTRAINT PK__SubFeatu__3214EC0777DEF9D1 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.Testimonial definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.Testimonial;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.Testimonial (
+	Id int IDENTITY(1,1) NOT NULL,
+	FullName nvarchar(100) COLLATE Turkish_CI_AS NULL,
+	Title nvarchar(50) COLLATE Turkish_CI_AS NULL,
+	Comment nvarchar(500) COLLATE Turkish_CI_AS NULL,
+	Status bit NULL,
+	CONSTRAINT PK__Testimon__3214EC0729BAF568 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.WhoWeAreDetail definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.WhoWeAreDetail;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.WhoWeAreDetail (
+	Id int IDENTITY(1,1) NOT NULL,
+	Title nvarchar(50) COLLATE Turkish_CI_AS NULL,
+	Subtitle nvarchar(200) COLLATE Turkish_CI_AS NULL,
+	Description1 nvarchar(500) COLLATE Turkish_CI_AS NULL,
+	Description2 nvarchar(500) COLLATE Turkish_CI_AS NULL,
+	CONSTRAINT PK__WhoWeAre__3214EC07BADA6B92 PRIMARY KEY (Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.sysdiagrams definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.sysdiagrams;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.sysdiagrams (
+	name sysname COLLATE Turkish_CI_AS NOT NULL,
+	principal_id int NOT NULL,
+	diagram_id int IDENTITY(1,1) NOT NULL,
+	version int NULL,
+	definition varbinary(MAX) NULL,
+	CONSTRAINT PK__sysdiagr__C2B05B616165598E PRIMARY KEY (diagram_id),
+	CONSTRAINT UK_principal_name UNIQUE (principal_id,name)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.Product definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.Product;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.Product (
+	Id int IDENTITY(1,1) NOT NULL,
+	Title nvarchar(100) COLLATE Turkish_CI_AS NOT NULL,
+	Price decimal(18,2) NOT NULL,
+	CoverImageUrl nvarchar(250) COLLATE Turkish_CI_AS NOT NULL,
+	City nvarchar(100) COLLATE Turkish_CI_AS NOT NULL,
+	Discrit nvarchar(100) COLLATE Turkish_CI_AS NOT NULL,
+	Address nvarchar(500) COLLATE Turkish_CI_AS NOT NULL,
+	Description nvarchar(MAX) COLLATE Turkish_CI_AS NOT NULL,
+	ProductCategoryId int NOT NULL,
+	EmployeeId int NOT NULL,
+	[Type] nvarchar(10) COLLATE Turkish_CI_AS NOT NULL,
+	CONSTRAINT PK__Product__3214EC0779213816 PRIMARY KEY (Id),
+	CONSTRAINT FK_Product_Categories FOREIGN KEY (ProductCategoryId) REFERENCES DBDAPPERREALESTATE.dbo.Categories(Id),
+	CONSTRAINT FK_Product_Employee FOREIGN KEY (EmployeeId) REFERENCES DBDAPPERREALESTATE.dbo.Employee(Id)
+);
+
+
+-- DBDAPPERREALESTATE.dbo.ProductDetail definition
+
+-- Drop table
+
+-- DROP TABLE DBDAPPERREALESTATE.dbo.ProductDetail;
+
+CREATE TABLE DBDAPPERREALESTATE.dbo.ProductDetail (
+	Id int IDENTITY(1,1) NOT NULL,
+	[Size] int NULL,
+	BadRoomCount tinyint NULL,
+	BathCount tinyint NULL,
+	RoomCount tinyint NULL,
+	GarageSize tinyint NULL,
+	BuildYear char(4) COLLATE Turkish_CI_AS NULL,
+	Price decimal(18,2) NULL,
+	Location nvarchar(500) COLLATE Turkish_CI_AS NULL,
+	VideoUrl nvarchar(500) COLLATE Turkish_CI_AS NULL,
+	ProductId int NULL,
+	CONSTRAINT PK__ProductD__3214EC070DA7CAAE PRIMARY KEY (Id),
+	CONSTRAINT FK_ProductDetail_Product FOREIGN KEY (ProductId) REFERENCES DBDAPPERREALESTATE.dbo.Product(Id)
+);

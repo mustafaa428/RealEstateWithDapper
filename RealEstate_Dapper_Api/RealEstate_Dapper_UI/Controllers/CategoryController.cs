@@ -61,10 +61,10 @@ namespace RealEstate_Dapper_UI.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateCategory(int id)
+        public async Task<IActionResult> UpdateCategory(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = client.GetAsync($"https://localhost:44392/api/Categories/{id}").Result;
+            var responseMessage = await client.GetAsync($"https://localhost:44392/api/Categories/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = responseMessage.Content.ReadAsStringAsync().Result;

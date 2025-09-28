@@ -107,7 +107,12 @@ namespace RealEstate_Dapper_Api.Controllers
             return Ok(result);
         }
 
-
+        [HttpGet("DifferentCityCount")]
+        public IActionResult DifferentCityCount()
+        {
+            var result = _statisticRepository.DifferentCityCount();
+            return Ok(result);
+        }
 
     }
 }
